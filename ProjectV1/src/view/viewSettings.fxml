@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.settingsController">
+   <center>
+      <HBox fx:id="boxAll" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #9b9b9b;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox fx:id="boxEmpresa" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="660.0" prefWidth="332.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="nombre" promptText="Nombre de la Empresa">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="50.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rtn" promptText=" RTN (Ejem: 01019006484084)">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cai" promptText=" CAI (Ejem: E690EA-5A9E78-7D44B4-8C5EBE-F3E553-5A)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="correo" promptText="Correo de le Empresa">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="cel1" promptText="Teléfono 1 (Ejem: 9723-0001)">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cel2" promptText="Teléfono 2 (Ejem: 2436-2521)">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="direccion" prefHeight="200.0" prefWidth="200.0" promptText="Dirección de la Empresa">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="btnGuardar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="39.0" prefWidth="444.0" text="Guardar">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="660.0" prefWidth="239.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="laInfo" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="300.0" prefHeight="76.0" prefWidth="471.0" text="¡¡INGRESE LA INFORMACIÓN DE FACTURACIÓN!!">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="50.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="desde" promptText="Desde: (Ejem: 0000020100000001)">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="hasta" promptText="Hasta: (Ejem: 0000020100002000)">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker fx:id="fecha" maxWidth="1.7976931348623157E308" prefHeight="40.0" promptText="Límite de Fecha">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                        <TextField fx:id="desdeAux" promptText="Iniciar Facturación desde:">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label maxWidth="1.7976931348623157E308" text="Logo de la Empresa:">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="47.0" prefWidth="497.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="ruta" editable="false" maxWidth="1.7976931348623157E308" promptText="Nombre de la imagen" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="btnCargar" mnemonicParsing="false" text="Cargar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ImageView fx:id="ima" fitHeight="127.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="boxBitacora" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="392.0" spacing="10.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="DESDE:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="bitDesde" editable="false" prefHeight="39.0" prefWidth="140.0" promptText="Ver Desde" />
+                              <Label maxWidth="1.7976931348623157E308" text="HASTA:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="bitHasta" editable="false" prefHeight="39.0" prefWidth="140.0" promptText="Ver Hasta" />
+                              <TextField fx:id="user" prefHeight="39.0" prefWidth="51.0" promptText="USUARIO" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="modulo" prefHeight="40.0" prefWidth="150.0" promptText="MODULO" />
+                              <Button fx:id="btnVer" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ver" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tblBitacora" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="columFecha" prefWidth="75.0" text="FECHA/HORA" />
+                            <TableColumn fx:id="columRegis" prefWidth="75.0" text="REGISTRO" />
+                              <TableColumn fx:id="columModulo" prefWidth="75.0" text="MODULO" />
+                              <TableColumn fx:id="columNombre" prefWidth="75.0" text="NOMBRE" />
+                              <TableColumn fx:id="columUsuario" prefWidth="75.0" text="USUARIO" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="btnLimpiar" mnemonicParsing="false" text="Limpiar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="boxTema" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="claro" fitHeight="264.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true" />
+                                    <RadioButton fx:id="light" mnemonicParsing="false" text="Tema Claro">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="oscuro" fitHeight="264.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true" />
+                                    <RadioButton fx:id="dark" mnemonicParsing="false" text="Tema Oscuro">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="btnAplicarCambios" mnemonicParsing="false" text="Aplicar Cambios">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </center>
+   <left>
+      <HBox cache="true" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #7e7e7e;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="boxLateral" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="imaLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="btnEmpresa" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Empresa">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBitacora" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Bitacora" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnTemas" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Temas" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAtras" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Atras">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSalir" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Salir">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="15.0" top="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </left>
+</BorderPane>

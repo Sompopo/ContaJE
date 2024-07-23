@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.registroCuentasController">
+   <children>
+      <VBox prefHeight="380.0" prefWidth="204.0" spacing="10.0" style="-fx-background-color: #7e7e7e;">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </HBox.margin>
+         <children>
+            <TextField fx:id="buscar" promptText="Cuenta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="btnBuscar" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Buscar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
+            <ListView fx:id="listCuentas" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ListView>
+            <HBox prefHeight="41.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Button fx:id="add" mnemonicParsing="false" />
+                  <Button fx:id="mod" mnemonicParsing="false" />
+                  <Button fx:id="del" mnemonicParsing="false" />
+                  <Button fx:id="res" mnemonicParsing="false" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #7e7e7e;" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+         <children>
+            <TextField fx:id="codigo" promptText="Código de la Cuenta">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nombre" promptText="Nombre de la Cuenta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <ComboBox fx:id="tipo" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Tipo de Cuenta">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <TextField fx:id="order" promptText="Numero de Order">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextArea fx:id="descrip" prefHeight="200.0" prefWidth="200.0" promptText="Descripción de la Cuenta">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <HBox prefHeight="26.0" prefWidth="566.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="act" mnemonicParsing="false" text="Estado: Activo">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="inac" mnemonicParsing="false" text="Estado: Inactivo">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="btnGuardar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Guardar">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
